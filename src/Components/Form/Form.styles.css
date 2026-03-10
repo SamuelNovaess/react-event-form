@@ -1,0 +1,10 @@
+.Form{
+    display: flex;
+    flex-direction: column;
+    background-color: #4a14c0;
+    width: 20%;
+    margin: 64px auto;
+    padding: 28px 32px;
+    border-radius: 12px;
+    gap: 20px;
+}

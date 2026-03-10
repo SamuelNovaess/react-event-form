@@ -1,0 +1,23 @@
+.DropdownForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.DropdownLabel{
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.DropdownSelect{
+    font-family: 'Poppins', sans-serif;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: #ffffff 1px solid;
+    color: #ffffff;
+    outline: none;
+    background-color: #00000039;
+    font-size: 14px;
+}
