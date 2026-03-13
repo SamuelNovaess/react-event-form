@@ -1,13 +1,22 @@
 import './Dropdown-Form.styles.css';
 
-const DropdownForm = ({ children, ...props }) => {
+const DropdownForm = ({ children, items, ...props}) => {
     return (
         <fieldset className='DropdownForm'>
             <label className='DropdownLabel' htmlFor={props.id}>
                 {children}
             </label>
-            <select className='DropdownSelect' {...props}>
-                <option value="">Select Event class</option>
+            <select className='DropdownSelect' {...props} defaultValue="">
+            <option value="" disabled>
+                Select an option
+            </option>
+            {items.map((item) => {
+                return (
+                    <option key={item.id} value={item.nome}>
+                        {item.nome}
+                    </option>
+                )
+            })}
             </select>
         </fieldset>
 

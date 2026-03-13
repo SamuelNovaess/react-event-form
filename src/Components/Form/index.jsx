@@ -4,7 +4,7 @@ import FieldsetForm from '../FieldsetForm'
 import TitleForm from '../TitleForm'
 import './Form.styles.css'
 
-const Form = ({}) => {
+const Form = ({ themes }) => {
     return (
         <form className='Form'>
             <TitleForm>
@@ -25,8 +25,17 @@ const Form = ({}) => {
             >
                 Event Date:
             </FieldsetForm>
-            <DropdownForm
-                placeholder='Select an agent'
+            <FieldsetForm
+                type='date'
+                name='lastDate'
+                id='lastDate'
+            >
+                Last Event Date:
+            </FieldsetForm>
+            <DropdownForm 
+                id='eventClass' 
+                name='eventClass' 
+                items={themes}
             >
                 Event Class:
             </DropdownForm>    
