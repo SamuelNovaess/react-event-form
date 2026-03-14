@@ -41,14 +41,10 @@ function App() {
     }
   ];
 
-  const Events = [
-    {
-    }
-  ];
+  const [Events, setEvents] = useState([]);
 
   const AddEvent = (Event) => {
-    Events.push(Event);
-    console.log(Events);
+    setEvents([...Events, Event]);
   };
 
   return (
@@ -63,7 +59,9 @@ function App() {
         return (
           <section key={theme.id}>
             <Theme Theme={theme}/>
-            {Events.map((event, index) => {
+            {Events
+            .filter((event) => event.eventClass === theme.nome)
+            .map((event, index) => {
               return (
                 <CardEvent Event={event} key={index}/>
               );

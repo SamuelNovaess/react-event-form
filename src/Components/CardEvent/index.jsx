@@ -4,10 +4,10 @@ const CardEvent = ({ Event }) =>{
     return (
         <div>
             <img src={Event.image} alt={Event.name}/>            
-            <p>{Event.eventclass}</p>
+            <p>{Event.eventClass}</p>
             <div>
-                <p>{Event.date}</p>
-                <p>{Event.lastDate}</p>
+                <p>{Event.date.toLocaleDateString()}</p>
+                <p>{Event.lastDate.toLocaleDateString()}</p>
             </div>
             <h4>{Event.name}</h4>
         </div>
