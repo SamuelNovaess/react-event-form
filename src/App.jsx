@@ -4,6 +4,7 @@ import Form from './Components/Form'
 import Header from './Components/Header'
 import MainSection from './Components/MainSection'
 import Theme from './Components/Themes'
+import CardEvent from './Components/CardEvent'
 
 function App() {
   
@@ -45,17 +46,30 @@ function App() {
     }
   ];
 
+  const AddEvent = (Event) => {
+    Events.push(Event);
+    console.log(Events);
+  };
+
   return (
     <main>
       <Header/>
       <MainSection/>
-      <Form themes={themes}/>
+      <Form 
+        themes={themes} 
+        AddEvent={AddEvent}
+      />
       {themes.map((theme) => {
         return (
           <section key={theme.id}>
             <Theme Theme={theme}/>
+            {Events.map((event, index) => {
+              return (
+                <CardEvent Event={event} key={index}/>
+              );
+            })}
           </section>
-        )
+        );
       })}
     </main>
   );

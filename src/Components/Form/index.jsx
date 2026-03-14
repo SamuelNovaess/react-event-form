@@ -4,7 +4,7 @@ import FieldsetForm from '../FieldsetForm'
 import TitleForm from '../TitleForm'
 import './Form.styles.css'
 
-const Form = ({ themes }) => {
+const Form = ({ themes, AddEvent }) => {
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -23,8 +23,7 @@ const Form = ({ themes }) => {
             image: selectedTheme.image
         };
 
-        console.log(events);
-
+        AddEvent(events);
     };
 
     return (
