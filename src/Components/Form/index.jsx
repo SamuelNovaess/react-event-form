@@ -5,8 +5,30 @@ import TitleForm from '../TitleForm'
 import './Form.styles.css'
 
 const Form = ({ themes }) => {
+
+    function handleSubmit(event) {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+
+        const selectedTheme = themes.find(function(theme){
+          return theme.id === Number(formData.get('eventClass'))  
+        });
+
+        const events = {
+            name: formData.get('eventName'),
+            date: new Date(formData.get('eventDate')),
+            lastDate: new Date(formData.get('lastDate')),
+            eventClass: selectedTheme.nome,
+            image: selectedTheme.image
+        };
+
+        console.log(events);
+
+    };
+
     return (
-        <form className='Form'>
+        <form className='Form' onSubmit={handleSubmit}>
             <TitleForm>
                 ADD A NEW EVENT
             </TitleForm>
@@ -43,7 +65,7 @@ const Form = ({ themes }) => {
                 Create New Event
             </ButtonForm>
         </form>
-    )
-}
+    );
+};
 
-export default Form
+export default Form;

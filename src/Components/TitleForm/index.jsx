@@ -6,7 +6,7 @@ const TitleForm = ({ children }) => {
         <h2 className='TitleForm'>
             {children}
         </h2>
-    )
+    );
 }
 
-export default TitleForm
+export default TitleForm;

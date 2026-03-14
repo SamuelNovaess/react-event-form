@@ -5,7 +5,7 @@ const ButtonForm = ({ children }) => {
         <button className='Button-Form'>
             {children}
         </button>
-    )
+    );
 }
 
 export default ButtonForm;

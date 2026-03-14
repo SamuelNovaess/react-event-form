@@ -12,10 +12,10 @@ const DropdownForm = ({ children, items, ...props}) => {
             </option>
             {items.map((item) => {
                 return (
-                    <option key={item.id} value={item.nome}>
+                    <option key={item.id} value={item.id}>
                         {item.nome}
                     </option>
-                )
+                );
             })}
             </select>
         </fieldset>

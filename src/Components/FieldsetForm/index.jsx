@@ -8,7 +8,7 @@ const FieldsetForm = ({ children, ...props }) => {
             </label>
             <input className='InputForm' {...props}/>
         </fieldset>
-    )
+    );
 }
 
-export default FieldsetForm
+export default FieldsetForm;

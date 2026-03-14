@@ -5,7 +5,7 @@ const Header = () => {
         <header className='Header'>
             <img src="/Images/vct-masters-santiago-logo.png"/>
         </header>
-    )
+    );
 }
 
-export default Header
+export default Header;
